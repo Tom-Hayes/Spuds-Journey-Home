@@ -13,7 +13,7 @@ from pygame.locals import *
 #############										 INITIALIZE												   #############
 #### ====================================================================================================================== ####
 
-# constants for representing the states from the initial toy
+# constants for representing the states
 STATE_OPEN = 0
 STATE_WAIT = 1
 STATE_MOVE = 2
@@ -35,9 +35,7 @@ view_hgt = 800
 world_wid = 10000
 world_hgt = 10000
 
-# the frame rate is the number of frames per second that will be displayed and although
-# we could (and should) measure the amount of time elapsed, for the sake of simplicity
-# we will make the (not unreasonable) assumption that this "delta time" is always 1/fps
+# the frame rate is the number of frames per second that will be displayed
 frame_rate = 40
 delta_time = 1 / frame_rate
 chick_time = 0
@@ -53,8 +51,7 @@ def read_csv(file_name):
 
         return map_array
 
-# load in some music poggggggg
-
+# load in some music
 pygame.mixer.init()
 pygame.mixer.music.load("Music/theme.mp3")
 
@@ -571,7 +568,7 @@ def main():
     while not closed_flag:
 
         #####################################################################################################
-        # this is the "inputs" phase of the game loop, where player input is retrieved and stored
+        # this is the "inputs" phase of the game loop
         #####################################################################################################
 
         # get a dictionary for the mouse, a tuple for the keyboard, and a boolean for the window close event
@@ -584,7 +581,7 @@ def main():
             cooldown_timer -= 1
 
         #####################################################################################################
-        # this is the "update" phase of the game loop, where the changes to the game world are handled
+        # this is the "update" phase of the game loop
         #####################################################################################################
 
         # flags for location markers
